@@ -157,6 +157,8 @@ func GenerateClientConfig(c *model.Config, telemetryID string, license *model.Li
 	props["WranglerMoveThreadFromGroupMessageChannelEnable"] = strconv.FormatBool(*c.WranglerSettings.MoveThreadFromGroupMessageChannelEnable)
 
 	if license != nil {
+		
+
 		props["ExperimentalEnableAuthenticationTransfer"] = strconv.FormatBool(*c.ServiceSettings.ExperimentalEnableAuthenticationTransfer)
 
 		if *license.Features.LDAP {

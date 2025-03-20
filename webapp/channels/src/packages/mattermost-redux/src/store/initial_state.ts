@@ -1,22 +1,24 @@
 // Copyright (c) 2015-present Mattermost, Inc. All Rights Reserved.
 // See LICENSE.txt for license information.
 
-import type {GlobalState} from '@mattermost/types/store';
+import type { GlobalState } from "@mattermost/types/store";
 
-import {zeroStateLimitedViews} from '../reducers/entities/posts';
+import { zeroStateLimitedViews } from "../reducers/entities/posts";
 
 const state: GlobalState = {
     entities: {
         general: {
             config: {},
-            license: {},
-            serverVersion: '',
+            license: {
+                IsLicensed: "true",
+            },
+            serverVersion: "",
             firstAdminVisitMarketplaceStatus: false,
             firstAdminCompleteSetup: false,
             customProfileAttributes: {},
         },
         users: {
-            currentUserId: '',
+            currentUserId: "",
             isManualStatus: {},
             mySessions: [],
             myAudits: [],
@@ -42,7 +44,7 @@ const state: GlobalState = {
             },
         },
         teams: {
-            currentTeamId: '',
+            currentTeamId: "",
             teams: {},
             myMembers: {},
             membersInTeam: {},
@@ -51,7 +53,7 @@ const state: GlobalState = {
             totalCount: 0,
         },
         channels: {
-            currentChannelId: '',
+            currentChannelId: "",
             channels: {},
             channelsInTeam: {},
             myMembers: {},
@@ -78,7 +80,7 @@ const state: GlobalState = {
             postEditHistory: [],
             reactions: {},
             openGraph: {},
-            currentFocusedPostId: '',
+            currentFocusedPostId: "",
             messagesHistory: {
                 messages: [],
                 index: {
@@ -133,7 +135,7 @@ const state: GlobalState = {
             commands: {},
             appsBotIDs: [],
             appsOAuthAppIDs: [],
-            dialogTriggerId: '',
+            dialogTriggerId: "",
             outgoingOAuthConnections: {},
         },
         files: {
@@ -224,93 +226,93 @@ const state: GlobalState = {
     requests: {
         channels: {
             getAllChannels: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
             getChannels: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
             myChannels: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
             createChannel: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
         },
         general: {
             websocket: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
         },
         posts: {
             createPost: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
             editPost: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
             getPostThread: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
         },
         teams: {
             getTeams: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
         },
         users: {
             login: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
             logout: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
             autocompleteUsers: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
             updateMe: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
         },
         admin: {
             createCompliance: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
         },
         files: {
             uploadFiles: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
         },
         roles: {
             getRolesByNames: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
             getRoleByName: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
             getRole: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
             editRole: {
-                status: 'not_started',
+                status: "not_started",
                 error: null,
             },
         },
@@ -319,8 +321,8 @@ const state: GlobalState = {
         connected: false,
         lastConnectAt: 0,
         lastDisconnectAt: 0,
-        connectionId: '',
-        serverHostname: '',
+        connectionId: "",
+        serverHostname: "",
     },
 };
 export default state;
