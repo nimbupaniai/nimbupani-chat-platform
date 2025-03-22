@@ -30,6 +30,8 @@ func customizeConfig(cfg *model.Config) {
 func generateDefaultConfig(outputFile *os.File) error {
 	defaultCfg := &model.Config{}
 	defaultCfg.SetDefaults()
+	// Apply custom modifications
+	customizeConfig(defaultCfg)
 	if data, err := json.MarshalIndent(defaultCfg, "", "  "); err != nil {
 		return err
 	} else if _, err := outputFile.Write(data); err != nil {
